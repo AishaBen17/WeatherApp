@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo@2x.png" alt="Weather logo" class="w-25">
+                <div class="ms-2">
+                    <h5 class="mb-0 fw-bolder">WeatherApp</h5>
+                    <h6 class="mb-0 txtbrand">Your weather, anytime</h6>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#News">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Live-cameras">Live Cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Photos">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header -->
+    <header class="mt-5 pt-4">
+        <div class="container">
+            <div class="text-center">
+                <h1 id="typingText" class="  fs-4 fw-bolder mb-4"></h1>
+                <p class="text-white fs-2 mt-2 fw-bolder" id="currentDate"></p>
+
+            </div>
+
+            <!-- Search Bar -->
+            <div class="row mb-5">
+                <div class="col-12 d-flex justify-content-center">
+
+                    <form class="input-group w-75">
+                        <input type="search" id="searchInput" class="form-control" placeholder="Enter your city"
+                            aria-label="Enter location">
+                        <button id="btnSearch" class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Weather Highlights Section -->
+            <div class="row mt-2">
+                <!-- Dynamic Cards -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card">
+                        <h5 id="todayName" class="card-header fw-bolder"></h5>
+                        <div class="card-body text-center">
+                            <h5 id="cityName" class="card-title fs-4 text-center mb-3 fw-bolder text-primary "></h5>
+                            <div class="content d-flex justify-content-between ">
+                                <h1 class="txttemp fw-bold mx-auto" id="cityTemp"></h1>
+                                <img src="" alt="weather Condition Image" id="weatherConditionImg" class="w-25 mb-2 mt-2 pt-2 mx-auto">
+                            </div>
+                            <div></div>
+                            <p id="weatherCondition" class="text-center fw-bolder text-danger fs-5"></p>
+                        </div>
+
+                        <div class="text-center icon pb-2">
+                            <span class="px-3"><img src="images/icon-umberella.png" alt="icon umberella"> <span id="humidity"
+                                    class="text-primary fw-bolder"></span></span>
+                            <span class="px-3"><img src="images/icon-wind.png" alt="icon wind"> <span id="wind"
+                                    class="text-primary fw-bolder"></span></span>
+                            <span class="px-3"><img src="images/icon-compass.png" alt="icon compass"> <span id="windDirection"
+                                    class="text-primary fw-bolder"></span> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card">
+                        <h5 id="tomorrowDay" class="card-header fw-bolder"></h5>
+
+                        <div class="card-body text-center">
+                            <img src="" id="tomorrowIcon" alt="" />
+                            <p id="maxTemp" class="card-text fw-bolder fs-3"> </p>
+                            <p id="minTemp" class="card-text  fs-6"></p>
+
+                            <p id="tomorrowCondition" class="text-center fw-bolder text-danger fs-5"></p>
+                        </div>
+
+                        <div class="pb-2 text-center">
+                            <span class="px-3"><img src="images/icon-umberella.png" alt="icon umberella"> <span id="tomorrowHumidity"
+                                    class="text-primary fw-bolder"></span></span>
+                            <span class="px-3"><img src="images/icon-wind.png" alt="icon wind"> <span id="tomorrowWind"
+                                    class="text-primary fw-bolder"></span></span>
+                            <span class="px-3"><img src="images/icon-compass.png" alt="icon compass"> <span
+                                    id="tomorrowWindDirection" class="text-primary fw-bolder"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card ">
+                        <h5 id="afterTomorrowDay" class="card-header fw-bolder"></h5>
+
+                        <div class="card-body text-center">
+                            <img src="" id="AftertomorrowIcon" alt="">
+                            <p id="afterTomorrowMaxTemp" class="card-text fw-bolder fs-3"></p>
+                            <p id="afterTomorrowMinTemp" class="card-text fs-6"></p>
+                            <p id="afterTomorrowCondition" class="text-center fw-bolder text-danger fs-5"></p>
+                        </div>
+                        <div class="pb-2 text-center">
+                            <span class="px-3"><img src="images/icon-umberella.png" alt="icon umberella"> <span id="afterTomHumidity"
+                                    class="text-primary fw-bolder"></span></span>
+                            <span class="px-3"><img src="images/icon-wind.png" alt="icon wind"> <span id="afterTomWind"
+                                    class="text-primary fw-bolder"></span></span>
+                            <span class="px-3"><img src="images/icon-compass.png" alt="icon compass"> <span
+                                    id="afterTomWindDirection" class="text-primary fw-bolder"></span></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FOOTER -->
+    <footer class="bg-light text-lg-start">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-12 d-flex justify-content-center">
+                    <form class="input-group w-75">
+                        <input type="text" class="form-control" placeholder="Enter your Email"
+                            aria-label="Enter your Email">
+                        <button id="btnSubscribe" class="btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center p-2">
+                <a href="#"><i class="fab fa-facebook fa-1x text-primary"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-1x text-primary"></i></a>
+                <a href="#"><i class="fab fa-pinterest fa-1x text-primary"></i></a>
+                <a href="#"><i class="fab fa-google fa-1x text-primary"></i></a>
+                <p class="mb-0 mt-1">© 2024 WeatherApp. All rights reserved.</p>
+                <a href="#" class="text-decoration-none text-muted">Privacy Policy</a> |
+                <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

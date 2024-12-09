@@ -1,0 +1,120 @@
+/* General Styling */
+body {
+    font-family: "Quicksand", serif;
+}
+
+/* Navbar Styling */
+.nav-item {
+    margin-left: 10px !important;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 4px 20px !important;
+    border-radius: 20px;
+    color: black !important;
+    padding: 0 50px;
+}
+
+.nav-link.active {
+    color: white !important;
+
+    background-color: #FB9902;
+}
+
+.nav-link:hover {
+
+    color: white !important;
+    border: 2px solid #029ED9;
+    background-color: #FB9902;
+}
+
+.txtbrand {
+    color: #FB9902;
+    font-size: 12px !important;
+    font-weight: 600;
+}
+
+/* General Links */
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/ray-falling-city.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.txttemp {
+    font-size: 60px;
+}
+
+/* Form Styling */
+header .form-control {
+    padding: 10px !important;
+    border-radius: 50px;
+    font-size: 20px !important;
+    font-weight: 500;
+
+}
+
+#typingText {
+    color: #FB9902;
+}
+
+#btnSearch,
+#btnSubscribe {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 10px !important;
+}
+
+#btnSearch {
+    margin-right: 20px;
+    background-color: #FB9902;
+    color: white;
+    border: 0;
+    font-weight: 600;
+    padding: 15px !important;
+
+}
+
+/* Footer Styling */
+footer .form-control {
+    padding: 10px !important;
+    border-radius: 50px;
+    font-size: 18px !important;
+    font-weight: 500;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+footer a {
+    color: #6c757d;
+    margin: 0 10px;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #029ED9;
+
+}
